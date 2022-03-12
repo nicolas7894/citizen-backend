@@ -68,7 +68,7 @@ export class ImxService {
           ],
         },
       ];
-
+      console.log(payload)
       await this.admin.mintV2(payload);
 
       const metadata = await this.metadataService.createWithRandom(tokenId.toString());
