@@ -23,7 +23,5 @@ ConfigModule.forRoot();
   providers: [AppService],
 })
 export class AppModule {
-  constructor() { 
-    console.log(process.env)
-   }
+  constructor() { }
 }
