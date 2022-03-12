@@ -7,6 +7,8 @@ import { AnswerModule } from './answer/answer.module';
 import { LeaderBoardModule } from 'src/leaderboard/leaderBoard.module';
 import { MetadataModule } from 'src/metadata/metadata.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { ConfigModule } from '@nestjs/config';
+ConfigModule.forRoot();
 
 @Module({
   imports: [
