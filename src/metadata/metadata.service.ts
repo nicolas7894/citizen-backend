@@ -9,8 +9,8 @@ import { CreateMetadataDto } from './dto';
 export class MetadataService {
   constructor(@InjectModel('Metadata') private readonly metadataModel: Model<Metadata>) {}
 
-  async findByNftId(nftId: string): Promise<Metadata> {
-    return this.metadataModel.findOne({ nftId }, { _id:0, tokenId: 0, __v:0}).exec();
+  async findByNftId(tokenId: string): Promise<Metadata> {
+    return this.metadataModel.findOne({ tokenId }, { _id:0, tokenId: 0, __v:0}).exec();
   }
 
   async create(createMetadata: CreateMetadataDto): Promise<Metadata> {
